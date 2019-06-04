@@ -3,6 +3,10 @@ import './App.css';
 import unsplash from './components/api/unsplash';
 import SearchBar from './components/SearchBar'
 import ImageList from './components/ImageList';
+import logo from './logo.svg'
+import logoUnsplash from './unsplash.jpg'
+import javascript from './js.png'
+import html from './html.png'
 
 
 class App extends React.Component {
@@ -46,9 +50,28 @@ class App extends React.Component {
   render(){
     return (
       <div className="ui container" style={{marginTop:'30px'}}>
+        <h1>React With API unsplash</h1>
         <SearchBar onSearchSubmit={this.onSearchSubmit}/>
         Found: {this.state.images.length} Images.
         <ImageList images={this.state.images}/>
+
+        <h1>Technologies used:</h1>
+        <div className="ui four column grid segment">
+          <div className="row">
+            <div className="column">
+              <img className="App-logo" alt="react" src={logo}/>
+            </div>
+            <div className="column">
+              <img className="App-logo-noAnimation" alt="react" src={logoUnsplash}/>
+            </div>
+            <div className="column">
+              <img className="App-logo-noAnimation" alt="react" src={html}/>
+            </div>
+            <div className="column">
+              <img className="App-logo-noAnimation" alt="react" src={javascript}/>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
